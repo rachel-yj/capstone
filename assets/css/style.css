@@ -640,3 +640,18 @@ figure.win { display: block; }
 .example__frame img { max-width: 100%; height: auto; }
 @media (max-width: 960px) { .case__body--gallery { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 520px) { .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; } }
+
+/* ---------- light / dark toggle ---------- */
+.theme-toggle {
+  flex: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  font-family: var(--f-mono); font-size: 0.78rem; font-weight: 500; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--ink); border-radius: var(--radius);
+  padding: 6px 10px; box-shadow: 2px 2px 0 var(--berry);
+}
+.theme-toggle:hover { background: var(--bg-band); }
+.theme-toggle__icon { font-size: 1rem; line-height: 1; }
+@media (max-width: 720px) {
+  .theme-toggle { padding: 6px 8px; }
+  .theme-toggle__label { display: none; }
+}
+@media (max-width: 1440px) { .tracks a { padding: 6px 7px; } .topbar__inner { gap: 14px; } }
