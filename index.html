@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>The Authenticity Gap</title>
+<meta content="cover" name="claude:viewport-fit-sides"/>
+<meta content="A multimedia story on generative AI in marketing and how audiences really feel about it. Rachel Li's DCIM Capstone Project, Rutgers University." name="description"/>
+<meta content="Rachel Li" name="author"/>
+<meta content="The Authenticity Gap" property="og:title"/>
+<meta content="Brands are racing to make ads with generative AI. Audiences aren't keeping pace. Rachel Li's DCIM Capstone Project." property="og:description"/>
+<meta content="article" property="og:type"/>
+<link href="data:," rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=DM+Mono:wght@400;500&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=VT323&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<!--CONTENT-START-->
+<a class="skip" href="#story">Skip to the story</a>
+<header class="topbar" id="topbar">
+<div class="topbar__inner">
+<a aria-label="The Authenticity Gap, back to top" class="wordmark" href="#top">THE AUTHENTICITY GAP</a>
+<nav aria-label="Sections" class="tracks">
+<ol class="tracks__list">
+<li><a data-track="poll-start" href="#poll-start"><span class="tracks__n">○</span> Quick Poll</a></li>
+<li><a data-track="rush" href="#rush"><span class="tracks__n">01</span> The Rush</a></li>
+<li><a data-track="gap" href="#gap"><span class="tracks__n">02</span> The Gap</a></li>
+<li><a data-track="paradox" href="#paradox"><span class="tracks__n">03</span> The Paradox</a></li>
+<li><a data-track="backlash" href="#backlash"><span class="tracks__n">04</span> The Backlash</a></li>
+<li><a data-track="footprint" href="#footprint"><span class="tracks__n">05</span> The Footprint</a></li>
+<li><a data-track="playbook" href="#playbook"><span class="tracks__n">06</span> The Playbook</a></li>
+<li><a data-track="sources" href="#sources"><span class="tracks__n">○</span> Sources</a></li>
+</ol>
+</nav>
+</div>
+<div aria-hidden="true" class="progress"><span class="progress__bar" id="progress"></span></div>
+</header>
+<main id="top">
+<!-- ============ HERO ============ -->
+<section aria-labelledby="hero-title" class="hero">
+<div class="hero__inner">
+<div class="spec spec--top">
+<span>DCIM CAPSTONE PROJECT</span>
+<span>6 CHAPTERS · 19 SOURCES</span>
+<span>FALL 2026</span>
+</div>
+<p class="eyebrow">Generative AI in marketing, and what audiences really think</p>
+<h1 class="hero__title" id="hero-title"><span>The</span> <span>Authenticity</span> <span>Gap</span></h1>
+<p class="hero__dek">Brands are racing to take advantage of generative AI, but audiences aren’t sold. This gap in expectations is where trust gets won or lost.</p>
+<p class="byline">By <strong>Rachel Li</strong> · Rutgers University · Digital Communication, Information &amp; Media Capstone</p>
+<ul aria-label="Three findings" class="hero__stats">
+<li>
+<span class="hero__num">83%</span>
+<span class="hero__label">of ad executives say their company has used AI to make creative, up from 60% in 2024.</span>
+<a class="cite" href="#src-williamson">IAB</a>
+</li>
+<li>
+<span class="hero__num">50%</span>
+<span class="hero__label">of U.S. consumers would rather buy from brands that avoid generative AI in their ads and content.</span>
+<a class="cite" href="#src-gartner">Gartner</a>
+</li>
+<li>
+<span class="hero__num">−31.5%</span>
+<span class="hero__label">fewer clicks, at the largest drop measured, when ads were labeled as AI-generated in a field test.</span>
+<a class="cite" href="#src-lee">Lee et al.</a>
+</li>
+</ul>
+<a class="btn btn--primary" href="#poll-start">Start with the poll <span aria-hidden="true">↓</span></a>
+<div class="spec spec--bottom">
+<span>READ TIME ≈ 15 MIN</span>
+<span>INTERACTIVE CHARTS &amp; POLL</span>
+</div>
+</div>
+</section>
+<!-- ============ OPENING POLL ============ -->
+<section aria-labelledby="poll-title" class="chapter chapter--poll" id="poll-start">
+<header class="chapter__head">
+<p class="chapter__track">BEFORE YOU READ</p>
+<h2 class="chapter__title" id="poll-title">Where Do You Stand?</h2>
+<p class="chapter__dek">Four quick questions to test how your instincts compare with the nation.</p>
+</header>
+<div class="prose">
+<p data-copy="poll-intro">Before getting into the research, take a minute to check your own reactions to AI in advertising. Each answer shows how people across the country answered the same question.</p>
+</div>
+<div class="win win--wide poll" id="poll">
+<div class="win__bar"><span class="win__name">reader_poll.exe</span><button class="win__btn" id="poll-reset" type="button">RESET</button></div>
+<div class="win__body">
+<form class="poll__form" id="poll-form" novalidate=""></form>
+<div aria-live="polite" class="poll__summary" id="poll-summary"></div>
+</div>
+</div>
+</section>
+<!-- ============ INTRO ============ -->
+<section aria-label="Introduction" class="chapter chapter--intro" id="story">
+<div class="prose">
+<p class="lede">Think back on the last ad you scrolled past. These days, somewhere between brainstorming and publishing, generative AI was probably involved in its creation. Most advertising executives say their company has used AI to make creative, and fewer than half say they always tell audiences when they do <a class="cite" href="#src-williamson">(Williamson et al., 2026)</a>.</p>
+<p>But how does the audience feel about it? To answer this guiding question, we look at national surveys, industry studies, controlled experiments, and the comment sections of the campaigns that went wrong.</p>
+<p>The short answer is that, rather than the usage of AI itself, audiences care more about whether they feel misled, and the industry itself is underestimating how much they care. The six chapters below follow that gap from boardroom to comment section to the data centers that power these campaigns.</p>
+</div>
+</section>
+<!-- ============ 01 THE RUSH ============ -->
+<section aria-labelledby="rush-title" class="chapter" data-chapter="1" id="rush">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 01 / 06</p>
+<h2 class="chapter__title" id="rush-title">The Rush</h2>
+<p class="chapter__dek">Why marketers adopted generative AI so quickly.</p>
+</header>
+<div class="prose">
+<p>For marketers, the case for generative AI comes down to speed and cost, and the tools are now part of almost every media plan. Advertisers who use AI report using it for social media ads (85%), display (73%), TV (56%) and audio (42%) <a class="cite" href="#src-williamson">(Williamson et al., 2026)</a>.</p>
+</div>
+<figure aria-labelledby="fig-rush-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">adoption_report.txt</span><span class="win__meta">IAB · KANTAR</span></div>
+<div class="win__body">
+<ul class="tiles tiles--3">
+<li class="tile"><span class="tile__num">86%</span><span class="tile__text">of video ad buyers use or plan to use generative AI to build video creative</span></li>
+<li class="tile"><span class="tile__num">64%</span><span class="tile__text">of ad executives call cost efficiency AI's top benefit, up from fifth place in 2024</span></li>
+<li class="tile"><span class="tile__num">63<small>% vs </small>51<small>%</small></span><span class="tile__text">of marketers vs. consumers who feel excited about AI in ads</span></li>
+</ul>
+</div>
+<figcaption class="caption" id="fig-rush-cap">Sources: IAB/Sonata Insights survey of 104 U.S. ad executives and 505 consumers, Oct 2025–Jan 2026 <a class="cite" href="#src-williamson">(Williamson et al., 2026)</a>; Kantar Media Reactions, 21,300 consumers in 30 countries and 974 senior marketers <a class="cite" href="#src-kantar">(Bubani &amp; Jones, 2026)</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>The promise of lower costs explains a lot about why AI has spread so fast. In two years, cost efficiency went from a minor perk to the main reason executives give for using AI, while fewer named creative innovation as a benefit. Brands are increasingly putting out AI content because it is cheaper, not because the result is better.</p>
+<p>Marketers are also more enthusiastic about AI than the people they're marketing to. Fewer than half of consumers (48%) say they like seeing AI-generated images in ads, and most (57%) worry about fake or misleading AI advertising <a class="cite" href="#src-kantar">(Bubani &amp; Jones, 2026)</a>. Kantar's summary puts it simply: marketers see AI as a practical assistant, while consumers see a potentially untrustworthy creative engine.</p>
+</div>
+</section>
+<!-- ============ 02 THE GAP ============ -->
+<section aria-labelledby="gap-title" class="chapter" data-chapter="2" id="gap">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 02 / 06</p>
+<h2 class="chapter__title" id="gap-title">The Gap</h2>
+<p class="chapter__dek">Executives think young consumers like AI ads. Most of them don't.</p>
+</header>
+<div class="prose">
+<p>Before you read on, take a guess. The Interactive Advertising Bureau (IAB) asked U.S. advertising executives how they think Gen Z and millennial consumers feel about AI-generated ads. Then it asked those consumers directly.</p>
+</div>
+<figure aria-labelledby="fig-guess-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">guess.exe</span><span class="win__meta">INTERACTIVE</span></div>
+<div class="win__body">
+<form class="guess" id="guess-form" novalidate="">
+<label class="guess__q" for="guess-range">What share of Gen Z and millennial consumers do you think feel positive about AI-generated ads?</label>
+<div class="guess__row">
+<input aria-describedby="guess-out" id="guess-range" max="100" min="0" step="1" type="range" value="60"/>
+<output class="guess__out" for="guess-range" id="guess-out">60%</output>
+<button class="btn btn--primary" id="guess-btn" type="submit">Reveal</button>
+</div>
+</form>
+<div aria-label="Number line from 0 to 100 percent comparing your guess with the survey results: executives estimated 82 percent, consumers reported 45 percent." class="chart" id="chart-guess" role="img"></div>
+<p aria-live="polite" class="guess__result" id="guess-result">Move the slider and press Reveal.</p>
+</div>
+<figcaption class="caption" id="fig-guess-cap">Share who feel “very” or “somewhat” positive about AI-generated ads, as estimated by executives and as reported by consumers ages 16–43. Source: <a class="cite" href="#src-williamson">Williamson et al., 2026</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>The gap is growing. Two years earlier, it was 32 points; now it is 37 <a class="cite" href="#src-williamson">(Williamson et al., 2026)</a>. As young consumers see more AI ads, they're making up their minds, and more of them are thinking negatively. In two years, the share with no opinion fell from 34% to 25%, while negative sentiment rose 12 points.</p>
+<p>Executives and consumers don't even describe the same brand the same way.</p>
+</div>
+<figure aria-labelledby="fig-words-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">brand_words.chart</span><button aria-pressed="false" class="win__btn" data-table-toggle="chart-words" type="button">TABLE</button></div>
+<div class="win__body">
+<div aria-hidden="true" class="legend">
+<span class="legend__item"><i class="sw sw--b"></i>Ad executives</span>
+<span class="legend__item"><i class="sw sw--a"></i>Gen Z &amp; millennial consumers</span>
+</div>
+<div aria-label="Dot plot. Share who describe brands that use AI-generated ads with each word. Innovative: executives 49%, consumers 23%. Forward-thinking: 46% vs 22%. Unique: 44% vs 26%. Manipulative: 10% vs 20%. Unethical: 7% vs 16%." class="chart" id="chart-words" role="img"></div>
+<div class="table-wrap" hidden="" id="chart-words-table"></div>
+</div>
+<figcaption class="caption" id="fig-words-cap">Share of each group who say the word describes brands that use AI to generate ads. Source: <a class="cite" href="#src-williamson">Williamson et al., 2026</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>Executives see AI as proof that a brand is modern. Consumers are twice as likely to read it as a sign that a brand is cutting corners or trying to trick them. And many brands assume Gen Z is the most comfortable with this new technology, but Gen Z is showing the most skepticism.</p>
+</div>
+<figure aria-labelledby="fig-slope-cap" class="win win--mid">
+<div class="win__bar"><span class="win__name">genz_vs_millennials.chart</span><button aria-pressed="false" class="win__btn" data-table-toggle="chart-slope" type="button">TABLE</button></div>
+<div class="win__body">
+<div aria-label="Slope chart of negative sentiment toward AI-generated ads. Gen Z rose from 21% in 2024 to 39% in 2026. Millennials rose from 15% to 20%." class="chart" id="chart-slope" role="img"></div>
+<div class="table-wrap" hidden="" id="chart-slope-table"></div>
+</div>
+<figcaption class="caption" id="fig-slope-cap">Share with negative sentiment toward AI-generated ads, 2024 vs. 2026. Gen Z = ages 16–27; millennials = ages 28–43. Source: <a class="cite" href="#src-williamson">Williamson et al., 2026</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>Gen Z's negativity nearly doubled in two years, while millennials barely moved. Gen Z respondents are also far more likely than millennials to call brands that use AI ads inauthentic (30% vs. 13%), disconnected (26% vs. 8%) and unethical (24% vs. 8%) <a class="cite" href="#src-williamson">(Williamson et al., 2026)</a>. For brands looking to market to the next generation of buyers, that is the wrong direction.</p>
+<p>The wariness isn't limited to young people. Pew Research Center asked 5,023 U.S. adults how they feel about AI's growing role in daily life and what it will do to people's ability to think creatively.</p>
+</div>
+<figure aria-labelledby="fig-pew-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">pew_survey.chart</span><button aria-pressed="false" class="win__btn" data-table-toggle="chart-pew" type="button">TABLE</button></div>
+<div class="win__body">
+<div aria-label="Pew Research Center survey of U.S. adults, June 2025. Feelings about the increased use of AI in daily life: 50% more concerned than excited, 38% equally concerned and excited, 10% more excited than concerned. Effect of AI on people's ability to think creatively: 53% say it will worsen, 16% say it will improve." class="chart" id="chart-pew" role="img"></div>
+<div class="table-wrap" hidden="" id="chart-pew-table"></div>
+</div>
+<figcaption class="caption" id="fig-pew-cap">Survey of 5,023 U.S. adults, June 9–15, 2025. Figures may not add to 100% because of rounding and respondents who did not answer or chose other options. Source: <a class="cite" href="#src-pew">Kennedy et al., 2025</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>Concern is the default, and it is rising: in 2021, 37% of Americans felt more concerned than excited <a class="cite" href="#src-pew">(Kennedy et al., 2025)</a>. And for an industry that sells creativity, the second finding is crucial. Far more Americans expect AI to weaken creative thinking than to strengthen it, so an ad that announces it was machine-made starts at a disadvantage.</p>
+<p>That wariness reaches purchasing decisions. Gartner found that 68% of U.S. consumers frequently wonder whether the content they see is real, and its analysts now frame AI as a question of trust <a class="cite" href="#src-gartner">(Gartner, 2026)</a>.</p>
+</div>
+<blockquote class="pull">
+<p>“Marketers should treat GenAI as a trust decision as much as a technology decision.”</p>
+<footer>Emily Weiss, Senior Principal Analyst, Gartner <a class="cite" href="#src-gartner">(Gartner, 2026)</a></footer>
+</blockquote>
+</section>
+<!-- ============ 03 THE PARADOX ============ -->
+<section aria-labelledby="paradox-title" class="chapter" data-chapter="3" id="paradox">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 03 / 06</p>
+<h2 class="chapter__title" id="paradox-title">The Paradox</h2>
+<p class="chapter__dek">AI ads can win the click and still lose the audience.</p>
+</header>
+<div class="prose">
+<p>If consumers distrust AI ads, why do brands keep making them? Partly because, by some measures, they work.</p>
+<p>Researchers at NYU Stern and Emory University ran test display ads on the Google Display Network: some made by human experts, some made by humans and edited with generative AI, and some generated entirely by AI. Then they watched what happened when the AI ads were properly disclosed <a class="cite" href="#src-lee">(Lee et al., 2025)</a>. Try it below.</p>
+</div>
+<figure aria-labelledby="fig-ctr-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">ctr_test.exe</span><button aria-pressed="false" class="win__btn" data-table-toggle="chart-ctr" type="button">TABLE</button></div>
+<div class="win__body">
+<div class="ctr-controls">
+<button aria-pressed="false" class="btn btn--toggle" id="ctr-toggle" type="button"><span aria-hidden="true" class="btn__box"></span>Add a “Made with AI” label</button>
+</div>
+<div aria-label="Bar chart of click-through rates. Human expert ad 3.73%. Fully AI-generated ad 4.44%. With an AI label, click-through falls by about 31.5% relative to the human-made ad, to roughly 2.6%." class="chart" id="chart-ctr" role="img"></div>
+<div class="table-wrap" hidden="" id="chart-ctr-table"></div>
+</div>
+<figcaption class="caption" id="fig-ctr-cap">Click-through rate in a field study on the Google Display Network. The labeled bar is an estimate based on the reported decline of up to 31.5% versus unlabeled human-made ads. Source: <a class="cite" href="#src-lee">Lee et al., 2025</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>Fully AI-generated ads won the most clicks, but only while viewers didn't know. Ads that AI merely edited didn't beat the human originals at all. A single label erased the advantage and then some.</p>
+<p>A NielsenIQ (NIQ) study found a different kind of tension. In a neuroscience study where more than 2,000 people watched AI-generated ads of varying quality, viewers could often tell intuitively that an ad was made with AI. They described those ads as more “annoying,” “boring” and “confusing” than traditional ads, and NIQ warns that this can drag down perceptions of the brand itself <a class="cite" href="#src-niq">(NielsenIQ, 2024)</a>.</p>
+<p>Even the words “artificial intelligence” carry a cost. In experiments with more than 1,000 U.S. adults across eight product and service categories, adding the term to an otherwise identical product description lowered purchase intent. The researchers traced the drop to lower emotional trust, and the effect was strongest for high-risk purchases like expensive electronics <a class="cite" href="#src-cicek">(Cicek et al., 2025)</a>.</p>
+</div>
+<aside aria-label="Key idea" class="callout">
+<p class="callout__label">THE SWITCH</p>
+<p class="callout__text">Recognition flips the reaction. AI content can win attention when it looks polished and passes as human-made. Once people spot it or are told about it, the response turns.</p>
+</aside>
+<h3 class="subhead">The disclosure dilemma</h3>
+<div class="prose">
+<p>Brands are thus left in a bind. Audiences want to know: as shown in our opening poll, most believe brands should disclose AI, and many doubt their ability to detect it. Getty Images found that nearly 90% of consumers want to know whether an image was made with AI <a class="cite" href="#src-getty">(Getty Images, n.d.)</a>. But if labels cost clicks, is disclosure worth it?</p>
+</div>
+<figure aria-labelledby="fig-disc-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">disclosure_test.txt</span><span class="win__meta">IAB</span></div>
+<div class="win__body">
+<ul class="tiles tiles--2">
+<li class="tile"><span class="tile__num">73%</span><span class="tile__text">of Gen Z and millennial consumers say knowing an ad used AI would increase or not change their likelihood of buying</span></li>
+<li class="tile"><span class="tile__num">#3</span><span class="tile__text">clear AI disclosure's rank among the biggest drivers of attention, behind high-quality visuals and humor</span></li>
+</ul>
+</div>
+<figcaption class="caption" id="fig-disc-cap">Source: <a class="cite" href="#src-williamson">Williamson et al., 2026</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>The click data and survey data point in different directions. A label might cost initial clicks, but most young consumers say it wouldn’t stop them from purchasing. And ultimately, being caught hiding AI usage costs trust that lasts longer than any advertising campaign.</p>
+</div>
+</section>
+<!-- ============ 04 THE BACKLASH ============ -->
+<section aria-labelledby="backlash-title" class="chapter" data-chapter="4" id="backlash">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 04 / 06</p>
+<h2 class="chapter__title" id="backlash-title">The Backlash</h2>
+<p class="chapter__dek">Six campaigns, two years, one pattern.</p>
+</header>
+<div class="prose">
+<p>The research is easiest to see in the campaigns that went wrong, and in the brands that learned from them. The biggest backlashes share a pattern: AI showed up where audiences expected authenticity most: warm moments, craftsmanship and real people.</p>
+</div>
+<nav aria-label="Case timeline" class="timeline">
+<div class="timeline__track" id="timeline"></div>
+<p class="timeline__legend"><span><i style="background:var(--berry)"></i>Backlash</span><span><i style="background:var(--matcha)"></i>Counter-move</span></p>
+</nav>
+<div class="cases">
+<article class="win case" id="case-coke">
+<div class="win__bar"><span class="win__name">case_01_coca-cola.txt</span><span class="tag tag--backlash">BACKLASH</span></div>
+<div class="win__body case__body">
+<div class="case__meta"><span class="case__date">Nov 2024 &amp; Nov 2025</span><h3 class="case__brand">Coca-Cola</h3><p class="case__what">“Holidays Are Coming,” remade with generative AI</p></div>
+<div class="case__text">
+<p>Coca-Cola remade its classic 1995 holiday ad with generative AI and faced significant backlash. The company came back with AI again the next year, this time steering clear of close-ups of AI-generated humans <a class="cite" href="#src-aliieva">(Aliieva, 2025)</a>.</p>
+<p>A team of researchers analyzed 7,822 YouTube and Reddit comments on the remake and found the backlash ran on three levels at once <a class="cite" href="#src-heimstad">(Heimstad et al., 2027)</a>:</p>
+<ol aria-label="The three layers of backlash" class="cps">
+<li><span class="cps__k">Content</span><span class="cps__v">Visual realism, execution quality and fit with the moment</span></li>
+<li><span class="cps__k">Psychological</span><span class="cps__v">Lost authenticity, creativity and human connection</span></li>
+<li><span class="cps__k">Socio-ethical</span><span class="cps__v">Suspected corporate greed, replaced workers and broader ethics</span></li>
+</ol>
+<p class="case__lesson"><span>LESSON</span> Backlash isn't only about AI looking worse. It's about what choosing AI says about a brand's values.</p>
+</div>
+<div class="video" data-kind="TV &amp; YOUTUBE AD" data-title="Coca-Cola “Holidays Are Coming” AI remake (2024)" data-yt="IQWUKWM2JrQ"></div>
+</div>
+</article>
+<article class="win case" id="case-guess">
+<div class="win__bar"><span class="win__name">case_02_guess.txt</span><span class="tag tag--backlash">BACKLASH</span></div>
+<div class="win__body case__body case__body--gallery">
+<div class="case__meta"><span class="case__date">Aug 2025</span><h3 class="case__brand">Guess × Vogue</h3><p class="case__what">AI-generated models in a print ad</p></div>
+<div class="case__text">
+<p>A Guess ad in Vogue's August 2025 issue featured two AI-generated models created by the London agency Seraphinne Vallora, and TikTok erupted. Creators objected to a fashion brand using models who don't exist, and critics said the images reinforced unrealistic beauty standards. One fashion creator summed it up: “This doesn't make me want to buy anything” <a class="cite" href="#src-mccarthy">(McCarthy, 2025)</a>.</p>
+<p class="case__lesson"><span>LESSON</span> Synthetic people are the fastest way to lose an audience, especially in categories built on real bodies.</p>
+</div>
+<figure class="example example--gallery">
+<div class="gallery">
+<div class="example__frame"><img alt="AI-generated model in a black-and-white striped Guess dress, posed against a blue wall under pink flowers" height="1280" loading="lazy" src="assets/img/guess-campaign-1.jpg" width="720"/></div>
+<div class="example__frame"><img alt="AI-generated model in a white Guess dress by turquoise water, with an AI-generated image label" height="1200" loading="lazy" src="assets/img/guess-campaign-2.jpg" width="800"/></div>
+<div class="example__frame"><img alt="AI-generated model in a light blue floral Guess dress holding a Guess handbag, in front of a lavender wall" height="1095" loading="lazy" src="assets/img/guess-campaign-3.jpg" width="800"/></div>
+</div>
+<figcaption class="example__cap"><span>AI-GENERATED GUESS CAMPAIGN IMAGES · 2025</span><a href="https://abc7news.com/post/controversy-stirs-ai-generated-models-new-guess-ads-appearing-vogue/17390923/" rel="noopener" target="_blank">Coverage at ABC7 News ↗</a></figcaption>
+</figure>
+</div>
+</article>
+<article class="win case case--counter" id="case-aerie">
+<div class="win__bar"><span class="win__name">case_03_aerie.txt</span><span class="tag tag--counter">COUNTER-MOVE</span></div>
+<div class="win__body case__body">
+<div class="case__meta"><span class="case__date">Oct 2025</span><h3 class="case__brand">Aerie</h3><p class="case__what">A public promise of “Real people only”</p></div>
+<div class="case__text">
+<p>Aerie went the other way. On October 9, 2025, it posted a pledge on Instagram: “No AI-generated bodies or people. Real people only.” The post drew more than 40,000 likes and became the brand's most popular post in a year, and engagement on its Instagram posts grew by about 75% between October 6 and 19 <a class="cite" href="#src-hart">(Hart, 2025)</a>.</p>
+<p>The brand framed the pledge as an extension of its 2014 promise to stop retouching photos. In 2026 it followed up with a campaign starring Pamela Anderson, shown here.</p>
+<p class="case__lesson"><span>LESSON</span> “Made by people” is becoming a selling point in its own right.</p>
+</div>
+<div class="video" data-kind="VIDEO AD" data-title="Aerie “100% Aerie Real” spot with Pamela Anderson (2026)" data-yt="kg9JqAQlX6E"></div>
+</div>
+</article>
+<article class="win case" id="case-valentino">
+<div class="win__bar"><span class="win__name">case_04_valentino.txt</span><span class="tag tag--backlash">BACKLASH</span></div>
+<div class="win__body case__body">
+<div class="case__meta"><span class="case__date">Dec 2025</span><h3 class="case__brand">Valentino</h3><p class="case__what">An AI-generated handbag campaign</p></div>
+<div class="case__text">
+<p>The luxury house promoted its DeVain handbag with AI-generated visuals on Instagram. The post was clearly labeled as AI, and commenters still called it “cheap,” “lazy” and “disturbing.” Anne-Liese Prem of the creative agency Loop told the BBC that Valentino showed “the right instinct” by being upfront, but that the backlash revealed “a deeper cultural tension” <a class="cite" href="#src-mcmahon">(McMahon, 2025)</a>.</p>
+<p class="case__lesson"><span>LESSON</span> Disclosure isn't a shield when craftsmanship is the product.</p>
+</div>
+<figure class="example">
+<div class="example__frame"><img alt="Three stills from Valentino's AI-generated DeVain video: the handbag over a crowd, the beaded V logo, and a crowd of people with distorted, merging limbs" height="900" loading="lazy" src="assets/img/valentino-devain.jpg" width="1600"/></div>
+<figcaption class="example__cap"><span>INSTAGRAM AD · DEC 2025</span><a href="https://www.instagram.com/maisonvalentino/reel/DRtmfBECAcm/" rel="noopener" target="_blank">Watch on Instagram ↗</a></figcaption>
+</figure>
+</div>
+</article>
+<article class="win case" id="case-mcd">
+<div class="win__bar"><span class="win__name">case_05_mcdonalds.txt</span><span class="tag tag--backlash">PULLED</span></div>
+<div class="win__body case__body">
+<div class="case__meta"><span class="case__date">Dec 2025</span><h3 class="case__brand">McDonald's Netherlands</h3><p class="case__what">“The most terrible time of the year”</p></div>
+<div class="case__text">
+<p>McDonald's Netherlands released a 45-second Christmas ad built entirely from AI-generated clips of holiday mishaps, ending with the line “hide out in McDonald's till January's here.” Viewers objected to both the AI and the cynical tone, and the company removed the ad within days <a class="cite" href="#src-aliieva">(Aliieva, 2025)</a>.</p>
+<p class="case__lesson"><span>LESSON</span> Emotional moments raise the stakes. The holidays are the worst place to look automated.</p>
+</div>
+<div class="video" data-kind="VIDEO AD · PULLED DEC 2025" data-title="McDonald's Netherlands “It's the Most Terrible Time of the Year” (2025)" data-yt="E-YwjXEVGo8"></div>
+</div>
+</article>
+<article class="win case case--counter" id="case-etsy">
+<div class="win__bar"><span class="win__name">case_06_etsy.txt</span><span class="tag tag--counter">COUNTER-MOVE</span></div>
+<div class="win__body case__body case__body--text">
+<div class="case__meta"><span class="case__date">Oct 2026</span><h3 class="case__brand">Etsy</h3><p class="case__what">New rules for AI in product listings</p></div>
+<div class="case__text">
+<p>Etsy now requires most listings to include at least one unedited photo of the real product against a real background. Patterns, recipes and instructions can no longer be AI-generated, bot-generated listings are banned, and buyers may get refunds when an item doesn't match a listing that broke the new image rules. At the same time, Etsy is investing more in AI behind the scenes to improve search and personalization <a class="cite" href="#src-james">(James, 2026)</a>.</p>
+<p class="case__lesson"><span>LESSON</span> Use AI to help people find things, not to change what they think they're buying.</p>
+</div>
+</div>
+</article>
+</div>
+<aside aria-label="Where AI lands" class="callout callout--split">
+<div>
+<p class="callout__label">WHERE BACKLASH HITS HARDEST</p>
+<ul class="dash">
+<li>Holidays and emotional moments</li>
+<li>Synthetic people and bodies</li>
+<li>Luxury, fashion and handmade goods</li>
+</ul>
+</div>
+<div>
+<p class="callout__label">WHERE AI IS TOLERATED</p>
+<ul class="dash">
+<li>Behind the scenes: search, matching, personalization</li>
+<li>Clearly labeled, well-made work</li>
+<li>Brands that keep real people visible</li>
+</ul>
+</div>
+</aside>
+</section>
+<!-- ============ 05 THE FOOTPRINT ============ -->
+<section aria-labelledby="footprint-title" class="chapter" data-chapter="5" id="footprint">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 05 / 06</p>
+<h2 class="chapter__title" id="footprint-title">The Footprint</h2>
+<p class="chapter__dek">The energy cost that never makes it into the campaign brief.</p>
+</header>
+<div class="prose">
+<p>Every AI-generated image and video runs on data centers whose demand for electricity is growing fast. MIT Technology Review measured the energy behind individual AI requests, and marketing is moving quickly into the most energy-hungry format of all: video.</p>
+</div>
+<figure aria-labelledby="fig-energy-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">energy_meter.dat</span><button aria-pressed="false" class="win__btn" data-table-toggle="chart-energy" type="button">TABLE</button></div>
+<div class="win__body">
+<div aria-label="Bar chart on a logarithmic scale of energy per AI request. A text response from a small model uses about 114 joules, like running a microwave for a tenth of a second. A high-quality image uses about 4,402 joules, about five and a half seconds of microwave. A five-second video uses about 3.4 million joules, like running a microwave for over an hour." class="chart" id="chart-energy" role="img"></div>
+<div class="table-wrap" hidden="" id="chart-energy-table"></div>
+</div>
+<figcaption class="caption" id="fig-energy-cap">Estimated total energy per request, logarithmic scale; each gridline is 10× the last. Text: Llama 3.1 8B. Image: Stable Diffusion 3 Medium, high quality. Video: CogVideoX, five seconds. Source: <a class="cite" href="#src-mittr">O'Donnell &amp; Crownhart, 2025</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>Because the scale is logarithmic, the bars understate the jump. One AI video uses roughly 770 times the energy of a high-quality image and about 30,000 times a short text answer <a class="cite" href="#src-mittr">(O'Donnell &amp; Crownhart, 2025)</a>. A campaign that generates and tests many video variations multiplies that cost with every version.</p>
+</div>
+<figure aria-labelledby="fig-grid-cap" class="win win--wide">
+<div class="win__bar"><span class="win__name">grid_report.txt</span><span class="win__meta">MIT TECH REVIEW · IEA</span></div>
+<div class="win__body">
+<ul class="tiles tiles--3">
+<li class="tile"><span class="tile__num">4.4%</span><span class="tile__text">of U.S. energy now goes to data centers, projected to reach as much as 12% by 2028</span></li>
+<li class="tile"><span class="tile__num">+48%</span><span class="tile__text">higher carbon intensity for data center electricity than the U.S. average</span></li>
+<li class="tile"><span class="tile__num">945 TWh</span><span class="tile__text">projected global data center demand in 2030, more than double today and slightly more than Japan uses now</span></li>
+</ul>
+</div>
+<figcaption class="caption" id="fig-grid-cap">Sources: <a class="cite" href="#src-mittr">O'Donnell &amp; Crownhart, 2025</a>; <a class="cite" href="#src-iea">IEA, 2025</a>.</figcaption>
+</figure>
+<div class="prose">
+<p>One request is small, but billions come with a heavy cost. Driven largely by AI, data centers are taking a growing share of the power grid, and the electricity they use is dirtier than average, so AI's footprint grows with every brand that ramps up its usage (<a class="cite" href="#src-mittr">O'Donnell &amp; Crownhart, 2025</a>; <a class="cite" href="#src-iea">IEA, 2025</a>).</p>
+</div>
+<h3 class="subhead">Sustainability is a perception, too</h3>
+<div class="prose">
+<p>Consumers bring the same instincts to sustainability that they bring to authenticity. In experiments using everyday products like a backpack, a toothbrush, a reusable cup and a tote bag, people rated AI-designed items as less sustainable than identical items described as human-designed. Participants who prioritized sustainability in their decision-making overwhelmingly opted for the human-designed option, and in a field experiment, ads for AI-designed products earned lower click-through and engagement <a class="cite" href="#src-duffek">(Duffek &amp; Biswas, 2026)</a>.</p>
+<p>The researchers traced the gap to perceived “genuine care”: people associate sustainability with human intention, something people don’t expect from a machine. Proving that human designers stayed involved shrank the effect.</p>
+<p>Green messaging made with AI has its own trap. Moderately green AI-generated content raised consumers' pro-environmental perceptions and purchase intent, but overly green content triggered skepticism about greenwashing and pushed purchase intent back down <a class="cite" href="#src-zhou">(Zhou &amp; Jiang, 2025)</a>.</p>
+</div>
+<aside aria-label="Key idea" class="callout">
+<p class="callout__label">THE THREAD</p>
+<p class="callout__text">Whether the question is authenticity or sustainability, audiences are looking for the same thing: evidence that a person cared.</p>
+</aside>
+</section>
+<!-- ============ 06 THE PLAYBOOK ============ -->
+<section aria-labelledby="playbook-title" class="chapter" data-chapter="6" id="playbook">
+<header class="chapter__head">
+<p class="chapter__track">CHAPTER 06 / 06</p>
+<h2 class="chapter__title" id="playbook-title">The Playbook</h2>
+<p class="chapter__dek">What the research suggests brands should do.</p>
+</header>
+<div class="prose">
+<p>The research never indicated that brands should stop using generative AI, but demonstrated that the industry has been reading the wrong signal. Clicks and cost savings measure why brands choose AI, but trust measures how consumers see the brand. Five lessons to take away:</p>
+</div>
+<ul class="rules">
+<li class="rule">
+<h3 class="rule__title">Disclose plainly</h3>
+<p>Most consumers want to know, and hiding AI costs more trust than labeling it. Put the label where people will actually see it.</p>
+<p class="rule__src"><a class="cite" href="#src-cint">Cint, 2026</a> · <a class="cite" href="#src-getty">Getty Images, n.d.</a> · <a class="cite" href="#src-williamson">Williamson et al., 2026</a></p>
+</li>
+<li class="rule">
+<h3 class="rule__title">Keep people in the picture</h3>
+<p>Synthetic people draw the strongest backlash. Showing real people, and human oversight of AI work, rebuilds the sense of care audiences look for.</p>
+<p class="rule__src"><a class="cite" href="#src-mccarthy">McCarthy, 2025</a> · <a class="cite" href="#src-hart">Hart, 2025</a> · <a class="cite" href="#src-duffek">Duffek &amp; Biswas, 2026</a></p>
+</li>
+<li class="rule">
+<h3 class="rule__title">Match the tool to the moment</h3>
+<p>Use AI where it helps people find and choose. Keep it away from holidays, emotional stories and craft-driven products, where it reads as a shortcut.</p>
+<p class="rule__src"><a class="cite" href="#src-james">James, 2026</a> · <a class="cite" href="#src-aliieva">Aliieva, 2025</a> · <a class="cite" href="#src-mcmahon">McMahon, 2025</a></p>
+</li>
+<li class="rule">
+<h3 class="rule__title">Treat quality as a trust signal</h3>
+<p>Low-quality AI visuals distract from the message and can drag down the whole brand. If it looks automated, audiences assume nobody cared.</p>
+<p class="rule__src"><a class="cite" href="#src-niq">NielsenIQ, 2024</a> · <a class="cite" href="#src-heimstad">Heimstad et al., 2027</a></p>
+</li>
+<li class="rule">
+<h3 class="rule__title">Count the footprint</h3>
+<p>AI video carries a real energy cost. Weigh it before generating at scale, and don't let AI overstate green claims that audiences will read as greenwashing.</p>
+<p class="rule__src"><a class="cite" href="#src-mittr">O'Donnell &amp; Crownhart, 2025</a> · <a class="cite" href="#src-zhou">Zhou &amp; Jiang, 2025</a></p>
+</li>
+</ul>
+<div class="prose">
+<p>The authenticity gap isn't fixed. Exposure is rising, younger consumers are forming their opinions now, and platforms like Etsy are still writing their rules. The brands that close the gap will be the ones that treat their audience's trust as part of the creative brief.</p>
+</div>
+</section>
+<!-- ============ ABOUT + SOURCES ============ -->
+<section aria-labelledby="sources-title" class="chapter chapter--notes" id="sources">
+<header class="chapter__head">
+<p class="chapter__track">NOTES</p>
+<h2 class="chapter__title" id="sources-title">About &amp; Sources</h2>
+</header>
+<div class="about">
+<h3 class="subhead">About this project</h3>
+<p>The Authenticity Gap is my capstone project for the Digital Communication, Information &amp; Media (DCIM) minor at Rutgers University. I'm a marketing major at Rutgers Business School with a concentration in global business, graduating in May 2027. Check out my portfolio here:</p><p class="about__cta"><a class="btn btn--primary" href="https://rachel-yj.github.io/showcase/#projects">Visit my portfolio <span aria-hidden="true">→</span></a></p>
+<p class="about__media">Ads shown on this page are embedded from YouTube or reproduced as still images for commentary and educational purposes. All rights belong to their owners.</p>
+</div>
+<div class="refs-wrap">
+<h3 class="subhead">References</h3>
+<ol class="refs" id="refs">
+        <li id="src-aliieva">Aliieva, E. (2025, December 11). Not lovin' it: McDonald's pulls AI-generated Christmas ad after social media backlash. <em>NBC News</em>. <a href="https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590" target="_blank" rel="noopener">https://www.nbcnews.com/world/europe/mcdonalds-ai-generated-christmas-advert-social-media-backlash-rcna248590</a></li>
+        <li id="src-kantar">Bubani, G., &amp; Jones, P. W. (2026, March 26). <em>The state of GenAI in media and advertising: Momentum meets reality</em>. Kantar. <a href="https://www.kantar.com/inspiration/advertising-media/the-state-of-genai-in-media-and-advertising" target="_blank" rel="noopener">https://www.kantar.com/inspiration/advertising-media/the-state-of-genai-in-media-and-advertising</a></li>
+        <li id="src-cicek">Cicek, M., Gursoy, D., &amp; Lu, L. (2025). Adverse impacts of revealing the presence of &ldquo;Artificial Intelligence (AI)&rdquo; technology in product and service descriptions on purchase intentions: The mediating role of emotional trust and the moderating role of perceived risk. <em>Journal of Hospitality Marketing &amp; Management, 34</em>(1), 1&ndash;23. <a href="https://doi.org/10.1080/19368623.2024.2368040" target="_blank" rel="noopener">https://doi.org/10.1080/19368623.2024.2368040</a></li>
+        <li id="src-cint">Cint. (2026, October 20). <em>Cint report finds 74% of U.S. consumers believe brands should disclose AI use in advertising</em> [Press release]. GlobeNewswire. <a href="https://www.globenewswire.com/news-release/2026/10/20/3384820/0/en/cint-report-finds-74-of-u-s-consumers-believe-brands-should-disclose-ai-use-in-advertising.html" target="_blank" rel="noopener">https://www.globenewswire.com/news-release/2026/10/20/3384820/0/en/cint-report-finds-74-of-u-s-consumers-believe-brands-should-disclose-ai-use-in-advertising.html</a></li>
+        <li id="src-duffek">Duffek, B., &amp; Biswas, D. (2026, July 6). AI and human designers: How consumers see genuine care in product design as more sustainable. <em>Journal of the Academy of Marketing Science</em>. <a href="https://doi.org/10.1007/s11747-026-01170-4" target="_blank" rel="noopener">https://doi.org/10.1007/s11747-026-01170-4</a></li>
+        <li id="src-gartner">Gartner. (2026, March 16). <em>Gartner marketing survey finds 50% of consumers prefer brands that avoid using GenAI in consumer-facing content</em> [Press release]. <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-16-gartner-marketing-survey-finds-50-percent-of-consumers-prefer-brands-that-avoid-using-genai-in-consumer-facing-content0" target="_blank" rel="noopener">https://www.gartner.com/en/newsroom/press-releases/2026-03-16-gartner-marketing-survey-finds-50-percent-of-consumers-prefer-brands-that-avoid-using-genai-in-consumer-facing-content0</a></li>
+        <li id="src-getty">Getty Images. (n.d.). <em>Building trust in the age of AI</em> [Report]. <a href="https://www.gettyimages.com/visualgps/reports-and-guides/building-trust-in-ai" target="_blank" rel="noopener">https://www.gettyimages.com/visualgps/reports-and-guides/building-trust-in-ai</a></li>
+        <li id="src-hart">Hart, J. (2025, October). Aerie's promise not to use AI in ads is its most popular Instagram post in a year. <em>Business Insider</em>. <a href="https://www.businessinsider.com/aerie-against-ai-in-ads-most-liked-instagram-post-2025-10" target="_blank" rel="noopener">https://www.businessinsider.com/aerie-against-ai-in-ads-most-liked-instagram-post-2025-10</a></li>
+        <li id="src-heimstad">Heimstad, S. B., Gaustad, T., Tafesse, W., &amp; Wien, A. H. (2027). When AI ads backfire: Deconstructing consumer backlash to GenAI advertising. <em>Journal of Retailing and Consumer Services, 94</em>, Article 105058. <a href="https://doi.org/10.1016/j.jretconser.2026.105058" target="_blank" rel="noopener">https://doi.org/10.1016/j.jretconser.2026.105058</a></li>
+        <li id="src-iea">International Energy Agency. (2025). <em>Energy and AI</em>. <a href="https://www.iea.org/reports/energy-and-ai" target="_blank" rel="noopener">https://www.iea.org/reports/energy-and-ai</a></li>
+        <li id="src-james">James, D. (2026, October 23). Etsy updates AI use policies to emphasize craftsmanship. <em>Retail Dive</em>. <a href="https://www.retaildive.com/news/etsy-updates-ai-use-policies-emphasize-craftsmanship/833838/" target="_blank" rel="noopener">https://www.retaildive.com/news/etsy-updates-ai-use-policies-emphasize-craftsmanship/833838/</a></li>
+        <li id="src-pew">Kennedy, B., Yam, E., Kikuchi, E., Pula, I., &amp; Fuentes, J. (2025, September 17). How Americans view AI and its impact on people and society. <em>Pew Research Center</em>. <a href="https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/" target="_blank" rel="noopener">https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/</a></li>
+        <li id="src-lee">Lee, H., Todri, V., Adamopoulos, P., &amp; Ghose, A. (2025, October 21). <em>The impact of visual generative AI on advertising effectiveness</em> [Preprint]. SSRN. <a href="https://doi.org/10.2139/ssrn.5638311" target="_blank" rel="noopener">https://doi.org/10.2139/ssrn.5638311</a></li>
+        <li id="src-mccarthy">McCarthy, K. (2025, August 1). Controversy stirs over AI generated &lsquo;models&rsquo; in new Guess ads appearing in Vogue. <em>ABC7 News</em>. <a href="https://abc7news.com/post/controversy-stirs-ai-generated-models-new-guess-ads-appearing-vogue/17390923/" target="_blank" rel="noopener">https://abc7news.com/post/controversy-stirs-ai-generated-models-new-guess-ads-appearing-vogue/17390923/</a></li>
+        <li id="src-mcmahon">McMahon, L. (2025, December 2). Fashion house Valentino criticised over &ldquo;disturbing&rdquo; AI handbag ads. <em>BBC News</em>. <a href="https://www.bbc.com/news/articles/cwyvjyvn83go" target="_blank" rel="noopener">https://www.bbc.com/news/articles/cwyvjyvn83go</a></li>
+        <li id="src-niq">NielsenIQ. (2024, December 12). <em>NIQ research uncovers hidden consumer attitudes toward AI-generated ads</em> [Press release]. <a href="https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/" target="_blank" rel="noopener">https://nielseniq.com/global/en/news-center/2024/niq-research-uncovers-hidden-consumer-attitudes-toward-ai-generated-ads/</a></li>
+        <li id="src-mittr">O'Donnell, J., &amp; Crownhart, C. (2025, May 20). We did the math on AI's energy footprint. Here's the story you haven't heard. <em>MIT Technology Review</em>. <a href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/" target="_blank" rel="noopener">https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/</a></li>
+        <li id="src-williamson">Williamson, D. A., Koch, J., &amp; Giegerich, C. (2026, January 15). <em>The AI ad gap widens</em>. Interactive Advertising Bureau. <a href="https://www.iab.com/insights/the-ai-ad-gap-widens/" target="_blank" rel="noopener">https://www.iab.com/insights/the-ai-ad-gap-widens/</a></li>
+        <li id="src-zhou">Zhou, C., &amp; Jiang, B. (2025). How do consumers react to AI-generated green marketing content? A hybrid analysis using PLS-SEM and text mining. <em>Journal of Retailing and Consumer Services, 87</em>, Article 104431. <a href="https://doi.org/10.1016/j.jretconser.2025.104431" target="_blank" rel="noopener">https://doi.org/10.1016/j.jretconser.2025.104431</a></li>
+      </ol>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer__inner">
+<p class="footer__mark">Rachel Li's DCIM Capstone Project</p>
+<p>The Authenticity Gap · Rutgers University · Fall 2026</p>
+<p class="footer__spec"><a href="#top">↑ Back to top</a></p>
+</div>
+</footer>
+<button class="backspot" hidden="" id="backspot" type="button"><span aria-hidden="true">↩</span> Back to where you were</button>
+<div class="tip" hidden="" id="tip" role="tooltip"></div>
+<!--CONTENT-END-->
+<script defer="" src="assets/js/main.js"></script>
+</body>
+</html>
