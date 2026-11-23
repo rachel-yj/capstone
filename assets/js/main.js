@@ -711,8 +711,41 @@
     }, { passive: true });
   }
 
+  /* ------------------------------------------------------- light / dark toggle */
+  function initTheme() {
+    var btn = $("#theme-toggle");
+    if (!btn) return;
+    var root = document.documentElement;
+    var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+    var saved = null;
+    try { saved = localStorage.getItem("authgap-theme"); } catch (e) {}
+    if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
+    function current() {
+      var t = root.getAttribute("data-theme");
+      if (t === "dark" || t === "light") return t;
+      return mq && mq.matches ? "dark" : "light";
+    }
+    function render() {
+      var dark = current() === "dark";
+      btn.setAttribute("aria-pressed", String(dark));
+      btn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      $(".theme-toggle__icon", btn).innerHTML = dark ? "&#9788;" : "&#9790;";
+      $(".theme-toggle__label", btn).textContent = dark ? "Light" : "Dark";
+    }
+    btn.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("authgap-theme", next); } catch (e) {}
+      render();
+    });
+    if (mq && mq.addEventListener) mq.addEventListener("change", render);
+    new MutationObserver(render).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    render();
+  }
+
   /* ------------------------------------------------------- boot */
   function start() {
+    initTheme();
     initNav();
     initTables();
     initGuess();
